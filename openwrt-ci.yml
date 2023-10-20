@@ -102,7 +102,14 @@ jobs:
           # CONFIG_TARGET_x86_64=y
           # CONFIG_TARGET_x86_64_Generic=y
           # EOF
-
+          
+          # 编译mk7621固件:
+           cat >> .config <<EOF
+           CONFIG_TARGET_ramips_mt7621=y
+           CONFIG_TARGET_ramips_mt7621_DEVICE_jcg_q20=y
+           CONFIG_TARGET_BOARD="ramips"
+           EOF
+          
           # 固件压缩:
           # cat >> .config <<EOF
           # CONFIG_TARGET_IMAGES_GZIP=y
